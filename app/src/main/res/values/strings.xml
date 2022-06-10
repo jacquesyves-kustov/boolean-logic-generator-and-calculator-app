@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LogicTools</string>
+    <string name="solve_button">SOLVE</string>
+    <string name="clear_button">CLEAR</string>
+    <string name="hint_formula_field">Your formula</string>
+    <string name="conjunction_button">&amp;</string>
+    <string name="implication_button">IF</string>
+    <string name="disjunction_button">OR</string>
+    <string name="not_button">NOT</string>
+    <string name="equal_button">BI</string>
+    <string name="random_button">RANDOM!</string>
+    <string name="strong_dis_button">OR!</string>
+    <string name="custom_list_item_default">DEFAULT</string>
+
+</resources>

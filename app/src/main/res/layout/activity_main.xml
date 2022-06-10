@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/formula_editText"
+        android:layout_width="386dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="13dp"
+        android:autofillHints="Enter your formula!"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/milligram_thin_trial"
+        android:hint="@string/hint_formula_field"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#DFD2D2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="311dp"
+        android:text="@string/clear_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/solveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="13dp"
+        android:text="@string/solve_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/randomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="156dp"
+        android:text="@string/random_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/conjunction_button"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/conjunction_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/disjunction_button"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="275dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/disjunction_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/not_button"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="338dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/not_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/equal_button"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="341dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/equal_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/strong_dis_button"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="209dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/strong_dis_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/implication_button"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/implication_button"
+        android:fontFamily="@font/milligram_extrabold_italic_trial"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="67dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="122dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/truthTableListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
