@@ -20,7 +20,7 @@ const char LOGICAL_NOT           = '~';
 const char LOGICAL_BICONDITIONAL = '=';
 
 // Functions prototypes
-std::string allSteps(const std::string& jsonRequest);
+std::string sendTruthTable(const std::string& jsonRequest);
 void normalize(std::string& formula);
 bool isWellFormed(std::string& formula);
 std::string createTruthTable(std::string& formula);

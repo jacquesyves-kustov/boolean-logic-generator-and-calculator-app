@@ -19,7 +19,7 @@ std::string getNewFormula(int it, int variables)
 std::string getRandomFormula(int it, int variables)
 {
     /*
-     * 'it' - counter of recursive calls
+     * 'it' - number of recursive calls
      * 'variables' - maximum number of variables in formula
      */
 
@@ -33,7 +33,7 @@ std::string getRandomFormula(int it, int variables)
     std::string temp = ""; // subformulas or single variables will be stored here
 
 
-    // If recursive is deep, it will return a variable
+    // If recursive is deep, it will return a single variable instead of sub-formula
     if (it <= 0)
     {
         // Choose a variable randomly
@@ -43,10 +43,7 @@ std::string getRandomFormula(int it, int variables)
         // Probably, it will add negation
         randVal = (rand() % 2);
 
-        if (randVal)
-            return LOGICAL_NOT + temp;
-        else
-            return temp;
+        return (randVal) ? LOGICAL_NOT + temp : temp;
     }
 
 
@@ -100,16 +97,13 @@ std::string getRandomFormula(int it, int variables)
     // Probably, it will add negation before
     randVal = (rand() % 2);
 
-    if (randVal)
-        return LOGICAL_NOT + temp;
-    else
-        return temp;
+    return (randVal) ? LOGICAL_NOT + temp : temp;
 }
 
 
-std::string allSteps(const std::string& JSONstr)
+std::string sendTruthTable(const std::string& JSONstr)
 {
-    // Get JSON from Java
+    // Get JSON with a formula to be solved from Java
     json request = json::parse(JSONstr);
 
     // Define given formula
@@ -127,7 +121,7 @@ std::string allSteps(const std::string& JSONstr)
     else
     {
         // If it cannot be solved, it will return "CANNOT BE SOLVED" as JSON
-        // Structure of error report is equal to correct answer
+        // JSON structure of error report is equal to correct answer structure
         json error;
         error["Values"] = "CANNOT";
         error["Result"] = "BE SOLVED";
@@ -284,7 +278,7 @@ bool isWellFormed(std::string& formula)
     }
 
 
-    // If all steps were passed, then the formula is correct
+    // If all steps are passed, it will return true
     return true;
 }
 
@@ -296,12 +290,12 @@ std::string createTruthTable(std::string& formula)
 
     for (auto ch : formula)
     {
-        if (variables.find(ch) == std::string::npos && ('a' <= ch && ch <= 'z'))
+        if (variables.find(ch) == std::string::npos && std::isalpha(ch))
             variables += ch;
     }
 
 
-    // Selection sort
+    // Selection sort of variables string
     unsigned minIndex;
     for (unsigned int i = 0; i < variables.length() - 1; ++i)
     {

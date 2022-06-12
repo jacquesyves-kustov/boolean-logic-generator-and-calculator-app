@@ -13,7 +13,7 @@ Java_com_example_logictools_MainActivity_getTruthTable(JNIEnv *env, jobject thiz
     const char *cstr = env->GetStringUTFChars(json_string, nullptr);
     std::string str = std::string(cstr);
 
-    return env->NewStringUTF(allSteps(str).c_str());
+    return env->NewStringUTF(sendTruthTable(str).c_str());
 }
 
 
